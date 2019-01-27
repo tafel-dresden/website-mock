@@ -8,10 +8,16 @@ CMS Wahl könnte stärkere Auswirkungen darauf haben welche Möglichkeiten wir i
 __PHP__
 * https://www.concrete5.org/
 * https://de.wordpress.org/
+* https://www.drupal.de/
+* https://octobercms.com/
+* https://bolt.cm/
+* https://getgrav.org/
 
 __JS__
 * https://www.endurojs.com/docs/what-is-enduro
 * https://keystonejs.com/
+* https://strapi.io/
+* https://apostrophecms.org/
 
 __Java__
 Java CMS sind tot... oder zu "enterprise"
