@@ -12,6 +12,7 @@ __PHP__
 * https://octobercms.com/
 * https://bolt.cm/
 * https://getgrav.org/
+* https://www.neos.io
 
 __JS__
 * https://www.endurojs.com/docs/what-is-enduro
