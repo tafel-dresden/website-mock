@@ -57,6 +57,7 @@ PHP     JS
 * Verfügbare Plugins
 * Update Frequenz / Stabilität
 * Geile Features o.O
+* Benötigte Features (to be defined)
 
 ### Battle!
 
