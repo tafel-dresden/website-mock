@@ -57,7 +57,17 @@ PHP     JS
 * Verfügbare Plugins
 * Update Frequenz / Stabilität
 * Geile Features o.O
-* Benötigte Features (to be defined)
+* Benötigte Features (ein ! bedeutet wichtig)
+  * !Content Pflege (... standard für CMS)
+  * !Multilanguage
+  * !Templating
+  * !Rechte System
+  * !User Verwaltung
+  * Datenbank Anbindung / Persistence
+  * API
+  * Analytics
+  * PayPal + evtl. weitere Payment Anbindungen
+  * Social Media Anbindung
 
 ### Battle!
 
@@ -66,7 +76,10 @@ PHP     JS
 #### Dokumentation Dev / Src
 https://documentation.concrete5.org/developers  
 https://github.com/concrete5/concrete5  
-6  / 3  
+* Die __Entwickler Doku__ sieht ganz brauchbar aus. Könnte aber einiges mehr an Beispiele vertragen und allgemein bessere Veranschaulichungen.
+* Der __Quellcode__ ist so gut wie gar nicht dokumentiert... eijeijei
+
+6  / 2  
 
 #### Offene github Issues
 https://github.com/concrete5/concrete5/issues  
@@ -111,7 +124,10 @@ https://www.concrete5.org/about/feature-index
 #### Dokumentation Dev / Src
 https://codex.wordpress.org/  
 https://github.com/WordPress/WordPress  
+* Die __Entwickler Doku__ ist sehr umfassend, sieht aber ziemlich "historisch gewachsen" aus. Viel Text, mittelmäßig viele Beispiele. Bräuchte mal ne Überholung :x
+* Owww man, der __Code__... oldskool PHP. Aber ziemlich gut dokumentiert, sogar mit Beispielen. Leider fehlt mir ein wenig das "warum die Sachen hier sind und wofür sie gut sind". Es ist oft nur die "Funktion der Funktion" erklärt. Also der Code nochmal in Prosa wiedergegeben. Wenn Code selbst gut geschrieben / strukturiert ist, brauch er eigentlich keine weitere Erklärung, da man den Code selbst lesen kann. Da sind "warum die Sachen hier sind und wofür sie gut sind" Kommentare wertvoller :P
 
+7 / 7
 
 #### Offene github Issues
 k.A.
@@ -150,9 +166,46 @@ https://de.wordpress.org/about/features/
 #### Dokumentation Dev / Src
 https://api.drupal.org/api/drupal  
 https://www.drupal.org/documentation  
-https://github.com/drupal/drupal  
+https://github.com/drupal/drupal
+* Die __Entwickler Doku__ sieht sehr nice aus. Man merkt, dass Drupal ein sehr "customisierbares" CMS ist - wenn man die Entwicklingszeit investiert. Es gibt eine online Entwickler Doku, ein Cookbook und eine Code API Doku mit Beispielen. 
+* Der __Quellcode__ ist seeehr "standard" dokumentiert. Das sieht schon fast generiert aus. Hier ein Beispiel:
 
-8 / 8  
+```php
+  protected function getForumStatistics($tid) {
+```
+
+Die Funktion heißt ```getForumStatistics```. Spoiler: Die wird wahrscheinlich irgendwelche Forum Statistiken zurück geben. Und übergeben bekommt sie eine ```$tid```, was höchstwahrscheinlich irgend ein Identifikator ist (```$tId```, würde das noch klarer machen). Jetzt die Dokumentation dazu:
+
+```php
+  /**
+   * Provides statistics for a forum.
+   *
+   * @param int $tid
+   *   The forum tid.
+   *
+   * @return \stdClass|null
+   *   Statistics for the given forum if statistics exist, else NULL.
+   */
+   protected function getForumStatistics($tid) {
+```
+
+(－‸ლ) Der einzige Mehrwert sind die @param und @return Annotationen, der Rest ist sinnlos... Mehr?!
+
+```php
+/**
+ * Provides forum manager service.
+ */
+class ForumManager implements ForumManagerInterface {
+```
+
+Super! Die Klasse ```ForumManager``` stellt den "forum manager service" zur Verfügung. Würde die Klasse ```ForumManagerService``` heißen, dann wäre das sowieso schon nichtssagende Kommentar: nichtsstagend². Und wofür ist der Service gut und welche Rolle spielt er für das (in dem Fall) Forum Modul? -_______-
+  
+// END OF RANT  
+
+Der __Code__ ist aber nicht überall so dokumentiert, dennoch macht diese Art der Doku den größten Anteil aus.
+Inline Kommentare sind recht wenig vorhanden, der Code ist aber gut strukturiert und leicht lesbar. Manchmal schachteln die if-Blöcke schon ziemlich hart an der Schachtelgrenze, aber das ist eher die Ausnahme.
+
+8 / 5  
 
 
 #### Offene github Issues
