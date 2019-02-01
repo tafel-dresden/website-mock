@@ -4,4 +4,4 @@ MockUp und Proof of Concept der Tafel Dresden Webseite. Also ein Klick Dummy zum
 
 # Inhalt
 
-* [CMS Evaluierung](doc/cms_evaluation)
+* [CMS Evaluierung](doc/cms_evaluation.md)
